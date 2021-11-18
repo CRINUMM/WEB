@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Удаление</title>
+</head>
+<body>
+    <div>
+        <h3>Вы действиледьно хотите удалить запись?</h3>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.StudentId" name="StudentId" />
+            <table>
+                <tr><td><input type="submit" value="Да" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

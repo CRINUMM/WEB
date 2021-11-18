@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Рейтинг студентов</title>
+</head>
+<body>
+    <div>
+        <h3>Рейтинговая таблица</h3>
+        <table>
+            <tr>
+                <td><p>ID</p></td>
+                <td><p>Имя</p></td>
+                <td><p>Группа</p></td>
+                <td><p>Рейтинг</p></td>
+                <td></td>
+            </tr>
+            @foreach (LR2.Models.Student b in ViewBag.Student)
+            {
+                <tr>
+                    <td><p>@b.Id</p></td>
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.Group</p></td>
+                    <td><p>@b.Rating</p></td>
+                    <td><p><a href="/Home/Up_or_Down/@b.Id">Изменить рейтинг</a></p></td>
+                    <td><p><a href="/Home/Delete/@b.Id">Удалить</a></p></td>
+                </tr>
+            }
+            <td><p><a href="/Home/Add">Добавить студента</a></p></td>
+        </table>
+    </div>
+</body>
+</html>
